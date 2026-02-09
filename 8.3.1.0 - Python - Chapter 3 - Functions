@@ -1,0 +1,26 @@
+def conversion(currency,dollar):
+    if(currency == "can"):
+        new_currency = dollar * 1.36
+        return new_currency
+    elif(currency == "euro"):
+        new_currency = dollar * 0.84
+        return new_currency
+    elif(currency ==  "rmb"):
+        new_currency = dollar * 6.94
+        return new_currency
+        
+def main():
+    currency = input("what currency would you like to convert (CAN$, EURO$, RMB$ ):")
+    amount = input("how much would you like to convert")
+    new_currency = 0.0
+    
+    try:
+        amount = float(amount)
+        currency = currency.lower()
+    except:
+        amount = input("please input a int for amount")
+    
+    new_currency = conversion(currency,amount)
+    print(new_currency)
+
+main()
