@@ -1,0 +1,62 @@
+
+def my_mult(x,y):
+  z = x * y
+  return z
+
+def my_sub(x,y):
+   z = x - y
+   return z
+
+def my_div(x,y):
+   z = x/y
+   return z
+
+def my_math(x,y) :
+  z=x+y
+  return z
+
+def main(choice):
+    if(choice == 4):
+        my_num_1 = 5
+        my_num_2 = 2
+        thirdChoice = input("what would you like default: add, subtraction: 2, multiplicacion: 3, division:4 ;")
+        try:
+           thirdChoice = int(thirdChoice)
+        except:
+           print("please input a int between 1-4")
+        if(thirdChoice == 2):
+           sum = my_sub(my_num_1, my_num_2)
+           print("The subtraction of", my_num_1, "-", my_num_2, "=",sum)
+        if(thirdChoice == 3):
+           sum = my_mult(my_num_1, my_num_2)
+           print("The multiplication of", my_num_1, "*", my_num_2, "=",sum)
+        if(thirdChoice == 4):
+           sum = my_div(my_num_1, my_num_2)
+           print("The division of", my_num_1, "/", my_num_2, "=",sum)
+        else: 
+           sum = my_math(my_num_1, my_num_2)
+           print("The addition of", my_num_1, "+", my_num_2, "=",sum)
+
+    elif(choice == 5):
+        tru = True
+        while(tru):
+            my_num_1 = input("please enter your variable: ")
+            my_num_2 = input("please enter your 2nd variable")
+            try:
+               my_num_1 = float(my_num_1)
+               my_num_2 = float(my_num_2)
+               tru = False
+            except:
+               print("please enter a number")
+        sum = my_math(my_num_1, my_num_2)
+        print("The sum of", my_num_1, "+", my_num_2, "=",sum)
+
+    else:
+       print("i told you to pick either 4 or 5.")
+
+option = input("would you like challeneg 4 or 5: ")
+try: 
+  option = int(option)
+  main(option)
+except:
+  print("please input 4 or 5")
